@@ -1,0 +1,35 @@
+/** 
+ * info about stuff and things
+ */
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int h;
+    do
+    {
+    printf("Height: ");
+    h = GetInt();
+    printf("The number you gave me was %d.\n", h);
+    }
+    while (h < 0 || h > 23);
+    
+    int n;
+    for(int n = 0; n < h; n++)
+    {
+        int n;
+        for(n = 0; n <= h; n++)
+        {
+            printf(" ");
+        }
+        for(n = 0; n < h; n++)
+        {
+            printf("#");
+        }
+        printf("\n");    
+    }
+}
+
+
+

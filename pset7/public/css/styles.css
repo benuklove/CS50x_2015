@@ -1,0 +1,78 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-pills {
+    text-align:center;
+    margin: 0 auto;
+    padding: 0;
+    width: 400px;
+}
+
+
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}
+
+#navbar
+{
+    color: red;
+    font-size: 150%;
+    position: relative;
+    float: left;
+    left: -5.0em;
+    border: 2px #999999 solid;
+    border-radius: 10%;
+}
+
+#portfolio
+{
+    color:red;
+    position: relative;
+    float: left;
+    left: -10.0em;
+    min-width: 30em;
+    width: 10%;
+    text-align: left;
+
+}
+
+#tablehelp
+{
+    width: 60.0em;
+}
+

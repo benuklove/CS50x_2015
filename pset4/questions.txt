@@ -1,0 +1,19 @@
+0.  BMP: 16,777,216; GIF: 256; JPEG: 16,777,216; PNG: 1.07 billion;
+1.  GIF, also APNG
+2.  Both create smaller file but lossy omits data and loses on each save. Lossy trades image quality for size.
+3.  JPEG
+4.  On a FAT system, deleting a file rewrites the metadata that points to the file, but leaves the disk blocks that contain the contents of the file intact.
+5.  Use a sanitization software (free or not) that overwrites files and slack space.
+6.  stdint.h is a header file that declares integer types of specified length.  It is useful to us because we can define structs with components of particular size for reading our bitmap.
+7.  Using uint8_t etc documents your intent, looks nicer, and allows better portability.
+8.  BYTE = 1 byte; DWORD, LONG = 4 bytes; WORD = 2 bytes;
+9.  ASCII: "B" and "M"
+10. bfSize is the size of the bmp, whereas biSize is the size of the bitmap information header.
+11. If biHeight is negative, the bitmap is a top-down device independent bitmap with the origin at the upper left corner.
+12. The biBitCount field specifies the bits per pixel.  It is between the number of planes (1) and the compression fields.
+13. The function might return NULL if the file could not be opened for some reason.  NULL pointers yield unpredictable results so it is good practice to test for them.
+14. The third argument to fread is always 1 because we want to read one data element at a time - the size of which is either the header or rgb triple.
+15. 3 bytes of padding.  (4 - (3 * 3) % 4) % 4 = 3
+16. In our file, the fseek function moves the file position indcator over a number of bytes from the current position as specified by the int padding.
+17. SEEK_CUR is a position offset marker.  In particular, it is relative to the current position.
+18. Rob Bowden with a stuffed animal chihuahua?!!
